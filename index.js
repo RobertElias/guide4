@@ -11,7 +11,8 @@ server.get('/', (reg, res)=>{
     res.status(200).json(songs);
 })
 
-const port = 5000;
+//make the port dynamic
+const port = process.env.PORT || 5000;
 server.listen(port, () => {
     console.log(`\n*** Server Running on ${port} ***\n`);
-  });
+  }); 
