@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require("express");
 
 const server = express();
@@ -8,16 +10,16 @@ server.get("/", (reg, res) => {
   const songs = [
     {
       id: 1,
-      name: "Final Countdown"
+      name: "Final Countdown", secret: process.env.SECRET
     },
     {
-        id: 2,
-        name: "Welcome To The Jungle"
-      },
-      {
-        id: 3,
-        name: "We are the Champions"
-      }
+      id: 2,
+      name: "Welcome To The Jungle"
+    },
+    {
+      id: 3,
+      name: "We are the Champions"
+    }
   ];
   res.status(200).json(songs);
 });

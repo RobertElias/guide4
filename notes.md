@@ -12,3 +12,5 @@
 - create index.js file
 - script  "start": "node index.js". on package.json
 - install npm i -D nodemon
+- make port dynamic 'const port = process.env.PORT || 5000; on index.js'
+- install dotenv 'npm i dotenv'
